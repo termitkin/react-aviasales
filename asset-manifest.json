@@ -1,15 +1,15 @@
 {
-  "main.css": "/static/css/main.167edf9d.chunk.css",
-  "main.js": "/static/js/main.cca23376.chunk.js",
-  "main.js.map": "/static/js/main.cca23376.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.62c8be70.chunk.js": "/static/js/2.62c8be70.chunk.js",
-  "static/js/2.62c8be70.chunk.js.map": "/static/js/2.62c8be70.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.38d9c1e42eaa4ee0148da55cfaf31b20.js": "/precache-manifest.38d9c1e42eaa4ee0148da55cfaf31b20.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.167edf9d.chunk.css.map": "/static/css/main.167edf9d.chunk.css.map",
-  "static/media/style.css": "/static/media/line-and-airplane.3ba30d40.svg",
-  "static/media/logo.svg": "/static/media/logo.18ef78fb.svg"
+  "main.css": "/react-aviasales/static/css/main.223f3c7d.chunk.css",
+  "main.js": "/react-aviasales/static/js/main.cca23376.chunk.js",
+  "main.js.map": "/react-aviasales/static/js/main.cca23376.chunk.js.map",
+  "runtime~main.js": "/react-aviasales/static/js/runtime~main.555fad69.js",
+  "runtime~main.js.map": "/react-aviasales/static/js/runtime~main.555fad69.js.map",
+  "static/js/2.62c8be70.chunk.js": "/react-aviasales/static/js/2.62c8be70.chunk.js",
+  "static/js/2.62c8be70.chunk.js.map": "/react-aviasales/static/js/2.62c8be70.chunk.js.map",
+  "index.html": "/react-aviasales/index.html",
+  "precache-manifest.17f1a81776755963e1d3225a52dbf2ce.js": "/react-aviasales/precache-manifest.17f1a81776755963e1d3225a52dbf2ce.js",
+  "service-worker.js": "/react-aviasales/service-worker.js",
+  "static/css/main.223f3c7d.chunk.css.map": "/react-aviasales/static/css/main.223f3c7d.chunk.css.map",
+  "static/media/style.css": "/react-aviasales/static/media/line-and-airplane.3ba30d40.svg",
+  "static/media/logo.svg": "/react-aviasales/static/media/logo.18ef78fb.svg"
 }
