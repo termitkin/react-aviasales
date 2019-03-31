@@ -1,0 +1,23 @@
+{
+  "checkboxes": [{
+    "name": "checkBox",
+    "key": "checkBox",
+    "label": "Все"
+  }, {
+    "name": "checkBox0",
+    "key": "checkBox0",
+    "label": "Без пересадок"
+  }, {
+    "name": "checkBox1",
+    "key": "checkBox1",
+    "label": "1 пересадка"
+  }, {
+    "name": "checkBox2",
+    "key": "checkBox2",
+    "label": "2 пересадки"
+  }, {
+    "name": "checkBox3",
+    "key": "checkBox3",
+    "label": "3 пересадки"
+  }]
+}

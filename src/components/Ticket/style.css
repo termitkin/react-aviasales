@@ -1,0 +1,204 @@
+.tickets-wrap__ticket {
+  margin-bottom: 20px;
+}
+
+.tickets-wrap__ticket:last-child {
+  margin-bottom: 0;
+}
+
+.ticket {
+  width: 566px;
+  height: 161px;
+  background: #fff;
+  box-shadow: 0px 1px 4px rgba(91, 137, 164, 0.25);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transition: all 0.25s;
+}
+
+.ticket:hover {
+  box-shadow: 0px 5px 25px rgba(91, 137, 164, 0.1);
+}
+
+.ticket__buy-button {
+  margin-top: auto;
+}
+
+.buy-button {
+  width: 160px;
+  height: 56px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6d00;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px #d64d08;
+  border-radius: 5px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.buy-button:focus {
+  padding: 3px 0;
+  box-shadow: 0 0 0 3px #2196F3;
+}
+
+.buy-button:hover {
+  background-color: #ff8124;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25), 0px 1px 0px #f7661d;
+}
+
+.buy-button:active {
+  background-color: #ed7a18;
+}
+
+.buy-button__text {
+  font-family: Open Sans, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.ticket__logo-and-buy-button {
+  width: 201px;
+  height: 161px;
+  border-right: 1px solid #eceff1;
+  padding: 26px 20px 25px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.ticket__time {
+  font-family: Open Sans, sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 26px;
+  color: #4a4a4a;
+}
+
+.ticket__date {
+  font-family: Open Sans, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8b9497;
+}
+
+.ticket__airport-code,
+.ticket__city {
+  font-family: Open Sans, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #4A4A4A;
+}
+
+.ticket__airport-code {
+  text-transform: uppercase;
+}
+
+.stops {
+  width: 111px;
+  height: 27px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stops::after {
+  content: '';
+  width: 110px;
+  height: 13px;
+  display: block;
+  margin-top: auto;
+  background-image: url('images/line-and-airplane.svg');
+  background-repeat: no-repeat;
+}
+
+.stops__text {
+  font-family: Open Sans, sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #8B9497;
+  text-transform: uppercase;
+}
+
+.turkish-logo {
+  width: 119px;
+  height: 33px;
+  background-image: url('images/turkish-logo.jpg');
+  background-repeat: no-repeat;
+}
+
+.s7-logo {
+  width: 153px;
+  height: 50px;
+  background-image: url('images/s7-logo.png');
+  background-repeat: no-repeat;
+}
+
+.ba-logo {
+  width: 143px;
+  height: 23px;
+  background-image: url('images/ba-logo.png');
+  background-repeat: no-repeat;
+}
+
+.su-logo {
+  width: 140px;
+  height: 38px;
+  background-image: url('images/su-logo.png');
+  background-repeat: no-repeat;
+}
+
+.ticket__turkish-logo {
+  margin-left: 22px;
+}
+.ticket__s7-logo {
+  margin-left: 16px;
+}
+.ticket__ba-logo {
+  margin-left: 12px;
+}
+.ticket__su-logo {
+  margin-left: 16px;
+}
+
+.ticket__times-and-stops {
+  width: 315px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin: 26px 21px 10px 25px;
+}
+
+.ticket__route {
+  width: 315px;
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticket__time-and-airports {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket__origin {
+  margin-right: auto;
+  text-align: left;
+}
+
+.ticket__destination {
+  margin-left: auto;
+  text-align: right;
+}

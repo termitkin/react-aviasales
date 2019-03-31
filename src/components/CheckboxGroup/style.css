@@ -1,0 +1,8 @@
+.filter__stop-checkboxes-group {
+  width: 232px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

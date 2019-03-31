@@ -1,0 +1,78 @@
+.filter__stop-checkbox-wrap {
+  width: 232px;
+  height: 36px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.filter__stop-checkbox-wrap:hover {
+  background-color: #f1fcff;
+}
+
+.filter__stop-checkbox-only-button {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  font-family: Open Sans, sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 35px;
+  text-align: right;
+  letter-spacing: 0.5px;
+  color: #2196f3;
+  text-transform: uppercase;
+  display: none;
+  cursor: pointer;
+}
+
+.filter__stop-checkbox-wrap:hover .filter__stop-checkbox-only-button {
+  display: block;
+  background-color: #f1fcff;
+}
+
+.filter__stop-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.filter__stop-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: Open Sans, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 35px;
+  color: #4A4A4A;
+}
+
+.filter__stop-label::before {
+  content: '';
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #D2D5D6;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.filter__stop-checkbox:checked + .filter__stop-label::before {
+  border: 1px solid #2196F3;
+  background-image: url('./images/check.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.filter__stop-checkbox:focus + .filter__stop-label::before {
+  border: 3px solid #2196F3;
+}
