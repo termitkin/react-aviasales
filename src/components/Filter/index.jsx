@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react'
-import CurrenyButtonGroup from '../CurrenyButtonGroup'
+import CurrencyButtonGroup from '../CurrencyButtonGroup'
 import CheckboxGroup from '../CheckboxGroup'
 import PropTypes from 'prop-types'
 import './style.css'
@@ -10,7 +10,7 @@ class Filter extends PureComponent {
       <div className="filter">
         <div className="filter__titles">Валюта</div>
 
-        <CurrenyButtonGroup currentCurrency = {this.currentCurrency} />
+        <CurrencyButtonGroup currentCurrency = {this.currentCurrency} />
 
         <div className="filter__titles">Количество пересадок</div>
 

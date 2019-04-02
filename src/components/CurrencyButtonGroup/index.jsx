@@ -3,7 +3,7 @@ import CurrencyButton from '../CurrencyButton'
 import PropTypes from 'prop-types'
 import './style.css'
 
-class CurrenyButtonGroup extends PureComponent {
+class CurrencyButtonGroup extends PureComponent {
 
   constructor(props) {
     super(props)
@@ -34,8 +34,8 @@ class CurrenyButtonGroup extends PureComponent {
   }  
 }
 
-CurrenyButtonGroup.propTypes = {
+CurrencyButtonGroup.propTypes = {
   currentCurrency: PropTypes.func.isRequired
 }
 
-export default CurrenyButtonGroup
+export default CurrencyButtonGroup
