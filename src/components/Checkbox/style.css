@@ -1,12 +1,21 @@
 .filter__stop-checkbox-wrap {
-  width: 232px;
+  width: 315px;
   height: 36px;
   padding: 0 15px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
 }
-
+@media screen and (min-width: 1048px) {
+  .filter__stop-checkbox-wrap {
+    width: 232px;
+    height: 36px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
 .filter__stop-checkbox-wrap:hover {
   background-color: #f1fcff;
 }

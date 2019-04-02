@@ -1,3 +1,9 @@
 .tickets-wrap {
-  width: 566px;
+  width: 315px;
+}
+
+@media screen and (min-width: 1048px) {
+  .tickets-wrap {
+    width: 566px;
+  }
 }

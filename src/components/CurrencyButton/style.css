@@ -1,5 +1,5 @@
 .filter__currency-button {
-  width: 68px;
+  width: 95px;
   height: 40px;
   background-color: white;
   border: 1px solid #d2d5d6;
@@ -11,9 +11,25 @@
   line-height: 22px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  transition: all 0.15s;
+  transition: color, background-color, border 0.15s;
 }
-
+@media screen and (min-width: 1048px) {
+  .filter__currency-button {
+    width: 68px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #d2d5d6;
+    cursor: pointer;
+    color: #2196f3;
+    font-family: Open Sans, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color, background-color, border 0.15s;
+  }
+}
 .filter__currency-button:hover {
   background-color: #f2fcff;
   border: 1px solid #64b5f5;

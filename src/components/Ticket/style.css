@@ -7,27 +7,37 @@
 }
 
 .ticket {
-  width: 566px;
-  height: 161px;
+  width: 315px;
+  min-height: 161px;
   background: #fff;
   box-shadow: 0px 1px 4px rgba(91, 137, 164, 0.25);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  transition: all 0.25s;
+}
+@media screen and (min-width: 1048px) {
+  .ticket {
+    width: 566px;
+    height: 161px;
+    background: #fff;
+    box-shadow: 0px 1px 4px rgba(91, 137, 164, 0.25);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: box-shadow 0.25s;
+  }
 }
 
-.ticket:hover {
-  box-shadow: 0px 5px 25px rgba(91, 137, 164, 0.1);
-}
-
-.ticket__buy-button {
-  margin-top: auto;
+@media screen and (min-width: 1048px) {
+  .ticket__buy-button {
+    margin-top: auto;
+  }
 }
 
 .buy-button {
-  width: 160px;
+  width: 140px;
   height: 56px;
   border: none;
   display: flex;
@@ -40,11 +50,29 @@
   padding: 5px 0;
   box-sizing: border-box;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: background-color, box-shadow 0.15s;
 }
 
+@media screen and (min-width: 1048px) {
+  .buy-button {
+    width: 160px;
+    height: 56px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6d00;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px #d64d08;
+    border-radius: 5px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color, box-shadow 0.15s;
+  }
+}
 .buy-button:focus {
-  padding: 3px 0;
+  padding: 5px 0;
   box-shadow: 0 0 0 3px #2196F3;
 }
 
@@ -67,15 +95,26 @@
 }
 
 .ticket__logo-and-buy-button {
-  width: 201px;
-  height: 161px;
-  border-right: 1px solid #eceff1;
-  padding: 26px 20px 25px 20px;
+  width: 315px;
+  border-right: none;
+  padding: 26px 10px 25px 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
 }
-
+@media screen and (min-width: 1048px) {
+  .ticket__logo-and-buy-button {
+    width: 201px;
+    height: 161px;
+    border-right: 1px solid #eceff1;
+    padding: 26px 20px 25px 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+}
 .ticket__time {
   font-family: Open Sans, sans-serif;
   font-weight: normal;
@@ -160,34 +199,52 @@
   background-repeat: no-repeat;
 }
 
-.ticket__turkish-logo {
-  margin-left: 22px;
+@media screen and (min-width: 1048px) {
+  .ticket__turkish-logo {
+    margin-left: 22px;
+  }
+  .ticket__s7-logo {
+    margin-left: 16px;
+  }
+  .ticket__ba-logo {
+    margin-left: 12px;
+  }
+  .ticket__su-logo {
+    margin-left: 16px;
+  }
 }
-.ticket__s7-logo {
-  margin-left: 16px;
-}
-.ticket__ba-logo {
-  margin-left: 12px;
-}
-.ticket__su-logo {
-  margin-left: 16px;
-}
-
 .ticket__times-and-stops {
-  width: 315px;
+  width: 295px;
   height: 25px;
   display: flex;
   justify-content: space-between;
-  margin: 26px 21px 10px 25px;
+  margin: 26px 0 10px 0;
+  padding: 0 10px;
 }
-
+@media screen and (min-width: 1048px) {
+  .ticket__times-and-stops {
+    width: 315px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 21px 10px 25px;
+  }
+}
 .ticket__route {
-  width: 315px;
-  margin-left: 25px;
+  width: 295px;
+  margin-left: 0;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
-
+@media screen and (min-width: 1048px) {
+  .ticket__route {
+    width: 315px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .ticket__time-and-airports {
   display: flex;
   flex-direction: column;
