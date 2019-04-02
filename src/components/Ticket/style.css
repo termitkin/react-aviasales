@@ -80,7 +80,10 @@
   background-color: #ff8124;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25), 0px 1px 0px #f7661d;
 }
-
+.buy-button:hover:focus {
+  padding: 5px 0;
+  box-shadow: 0 0 0 3px #2196F3;
+}
 .buy-button:active {
   background-color: #ed7a18;
 }
