@@ -12,8 +12,8 @@ class TicketsGroup extends PureComponent {
     let filteredTickets = [];
     let ticketsToShow = [];
 
-    stops.forEach(function(el) {
-      filteredTickets = ticketsFromProps.filter(function(ticket) {
+    stops.forEach(el => {
+      filteredTickets = ticketsFromProps.filter(ticket => {
 
         if (ticket.stops === parseInt(el)) {
           return true;
@@ -25,6 +25,10 @@ class TicketsGroup extends PureComponent {
 
       ticketsToShow.push(...filteredTickets);
 
+    })
+
+    ticketsToShow.sort((a, b) => {
+      return a.price - b.price;
     })
 
     const tickets = ticketsToShow.map(ticket => <Ticket currentCurrency={currentCurrency} key = {ticket.price+ticket.arrival_time+ticket.departure_time} tickets = {ticket} />)
