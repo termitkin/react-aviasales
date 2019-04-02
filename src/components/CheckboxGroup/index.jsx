@@ -47,7 +47,6 @@ class CheckboxGroup extends PureComponent {
     this.setState({
       [elem]: true
     })
-
   }
 
   changed = elem => {
@@ -76,6 +75,22 @@ class CheckboxGroup extends PureComponent {
       this.setState({
         checkBox: false
       })
+    }
+
+    // Если включили все чекбоксы, кроме "все", то включить "все"
+    else if (elem !== 'checkBox' && this.state.checkBox === false) {
+      let obj = this.state;
+      let check = 0;
+      for (let key in obj) {
+        if (key !== 'checkBox' && obj[key] === false) {
+          check++;
+        }
+      }
+      if (check === 1 && this.state[elem] === false) {
+        this.setState({
+          checkBox: true
+        })
+      }
     }
 
     this.setState({
