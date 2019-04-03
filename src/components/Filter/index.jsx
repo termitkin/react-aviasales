@@ -8,13 +8,16 @@ class Filter extends PureComponent {
   render() {
     return (
       <div className="filter">
-        <div className="filter__titles">Валюта</div>
+        <fieldset className="filter__controls-wrap">
+          <legend className="filter__titles">Валюта</legend>
+          
+          <CurrencyButtonGroup currentCurrency = {this.currentCurrency} />
+        </fieldset>
+        <fieldset className="filter__controls-wrap">
+          <legend className="filter__titles">Количество пересадок</legend>
 
-        <CurrencyButtonGroup currentCurrency = {this.currentCurrency} />
-
-        <div className="filter__titles">Количество пересадок</div>
-
-        <CheckboxGroup stops={this.stops} />
+          <CheckboxGroup stops={this.stops} />
+        </fieldset>
       </div>
     )
   }
