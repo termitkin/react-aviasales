@@ -16,10 +16,10 @@ class CurrencyButtonGroup extends PureComponent {
 
   render() {
     return (      
-      <div className="filter__currency-buttons-group">
-        <CurrencyButton currency='rub' currentCurrency = {this.state.currency} clicked = { this.clicked } round = 'filter__currency-button_round_left' />
-        <CurrencyButton currency='usd' currentCurrency = {this.state.currency} clicked = { this.clicked } />
-        <CurrencyButton currency='eur' currentCurrency = {this.state.currency} clicked = { this.clicked } round = 'filter__currency-button_round_right' />
+      <div aria-label="В какой валюте показывать цены" className="filter__currency-buttons-group">
+        <CurrencyButton ariaLabel="рубли" currency='rub' currentCurrency = {this.state.currency} clicked = { this.clicked } round = 'filter__currency-button_round_left' />
+        <CurrencyButton ariaLabel="доллары" currency='usd' currentCurrency = {this.state.currency} clicked = { this.clicked } />
+        <CurrencyButton ariaLabel="евро" currency='eur' currentCurrency = {this.state.currency} clicked = { this.clicked } round = 'filter__currency-button_round_right' />
       </div>
     )
   }
