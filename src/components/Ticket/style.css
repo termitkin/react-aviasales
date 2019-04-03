@@ -110,9 +110,9 @@
 @media screen and (min-width: 1048px) {
   .ticket__logo-and-buy-button {
     width: 201px;
-    height: 161px;
+    height: 160px;
     border-right: 1px solid #eceff1;
-    padding: 26px 20px 25px 20px;
+    padding: 26px 20px 25px 14px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -203,17 +203,8 @@
 }
 
 @media screen and (min-width: 1048px) {
-  .ticket__turkish-logo {
-    margin-left: 22px;
-  }
-  .ticket__s7-logo {
-    margin-left: 16px;
-  }
-  .ticket__ba-logo {
-    margin-left: 12px;
-  }
-  .ticket__su-logo {
-    margin-left: 16px;
+  .ticket__logo {
+    margin: 0 auto;
   }
 }
 .ticket__times-and-stops {
@@ -230,7 +221,7 @@
     height: 25px;
     display: flex;
     justify-content: space-between;
-    margin: 26px 21px 10px 25px;
+    margin: 26px 21px 0px 12px;
   }
 }
 .ticket__route {
@@ -243,7 +234,7 @@
 @media screen and (min-width: 1048px) {
   .ticket__route {
     width: 315px;
-    margin-left: 25px;
+    margin-left: 14px;
     display: flex;
     justify-content: space-between;
   }
