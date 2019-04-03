@@ -2,13 +2,13 @@
   width: 285px;
   height: 40px;
   display: flex;
-  margin: 10px 15px 15px;
+  margin: 10px 15px 16px;
 }
 @media screen and (min-width: 1048px) {
   .filter__currency-buttons-group {
     width: 202px;
     height: 40px;
     display: flex;
-    margin: 10px auto 15px;
+    margin: 10px auto 16px;
   }
 }
