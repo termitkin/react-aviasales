@@ -21,6 +21,7 @@
 }
 
 .filter__stop-checkbox-only-button {
+  width: 49px;
   background-color: transparent;
   border: none;
   margin-left: auto;
@@ -28,16 +29,16 @@
   font-weight: 600;
   font-size: 11px;
   line-height: 35px;
-  text-align: right;
   letter-spacing: 0.5px;
   color: #2196f3;
   text-transform: uppercase;
   display: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .filter__stop-checkbox-wrap:hover .filter__stop-checkbox-only-button {
-  display: block;
+  display: table-cell;
   background-color: #f1fcff;
 }
 
