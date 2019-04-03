@@ -9,7 +9,7 @@ class CurrencyButton extends PureComponent {
     this.props.currency === this.props.currentCurrency ? className += ' filter__currency-button_active' : className += '';
 
     return (
-      <button className={className} onClick = {this.handleClick}>
+      <button aria-label={this.props.ariaLabel} className={className} onClick = {this.handleClick}>
         { this.props.currency }
       </button>
     )
