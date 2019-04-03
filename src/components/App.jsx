@@ -20,8 +20,9 @@ class App extends PureComponent {
   render() {
     return (
       <div className="wrapper">
+        <h1 className="page-heading">Покупка билетов из Владивостока в Тель-Авив</h1>
         <Logo />
-        <div className="content-wrapper">
+        <div role="main" id="main" className="content-wrapper">
           <Filter currentCurrency = {this.currentCurrency} stops = {this.stops} />
           <TicketsGroup tickets = {tickets.tickets} currentCurrency = {this.state.currentCurrency} stops = {this.state.stops} />
         </div>
