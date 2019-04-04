@@ -15,7 +15,7 @@ const Ticket = props => {
     const finalPrice = priceConverter(price, props.currentCurrency);
 
     return(
-      <div className='ticket tickets-wrap__ticket'>
+      <div className='ticket tickets-wrap__ticket' role="article" aria-label="Билет">
         <div className="ticket__logo-and-buy-button">
            <div className = { companyLogo(carrier) }></div>
           <button className="buy-button ticket__buy-button" type="button">
@@ -25,32 +25,32 @@ const Ticket = props => {
         </div>
 
         <div className="ticket__times-and-stops">
-          <div className="ticket__time">{ departure_time }</div>
+          <div className="ticket__time" aria-label="Время вылета">{ departure_time }</div>
           <div className="stops">
-            <div className="stops__text">{ stops ? stops : '' } { stopsText(stops) }</div>
+            <div className="stops__text" aria-label="Количество пересадок">{ stops ? stops : '' } { stopsText(stops) }</div>
           </div>
-          <div className="ticket__time">{ arrival_time }</div>
+          <div className="ticket__time" aria-label="Время прилета">{ arrival_time }</div>
         </div>
 
         <div className="ticket__route">
           <div className="ticket__origin">
-            <div className="ticket__airport-and-city">
+            <div className="ticket__airport-and-city" aria-label="Вылет из">
               <span className="ticket__airport-code">{ origin }, </span>
               <span className="ticket__city">{ origin_name }</span>
             </div>
 
-            <div className="ticket__date-and-day">
+            <div className="ticket__date-and-day" aria-label="Дата вылета">
               <span className="ticket__date">{ departureDate }</span>
             </div>
           </div>
 
           <div className="ticket__destination">
-            <div className="ticket__airport-and-city">
+            <div className="ticket__airport-and-city" aria-label="Прилет в">
               <span className="ticket__city">{ destination_name }, </span>
               <span className="ticket__airport-code">{ destination }</span>
             </div>
 
-            <div className="ticket__date-and-day">
+            <div className="ticket__date-and-day" aria-label="Дата прилета">
               <span className="ticket__date">{ arrivalDate }</span>
             </div>
           </div>
