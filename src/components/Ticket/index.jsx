@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react'
+import React from 'react'
 import { displayDate } from './displayDate.js'
 import { stopsText } from './stopsText.js'
 import { companyLogo } from './companyLogo.js'
@@ -6,14 +6,13 @@ import { priceConverter } from './priceConverter.js'
 import PropTypes from 'prop-types'
 import './style.css'
 
-class Ticket extends PureComponent {
-  render() {
-    const { origin, origin_name, destination, destination_name, departure_date, departure_time, arrival_date, arrival_time, carrier, stops, price } = this.props.tickets;
+const Ticket = props => {
+    const { origin, origin_name, destination, destination_name, departure_date, departure_time, arrival_date, arrival_time, carrier, stops, price } = props.tickets;
 
     const departureDate = displayDate(departure_date);
     const arrivalDate = displayDate(arrival_date);
 
-    const finalPrice = priceConverter(price, this.props.currentCurrency);
+    const finalPrice = priceConverter(price, props.currentCurrency);
 
     return(
       <div className='ticket tickets-wrap__ticket'>
@@ -59,7 +58,6 @@ class Ticket extends PureComponent {
 
       </div>
     )
-  }
 }
 
 Ticket.propTypes = {

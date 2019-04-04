@@ -1,22 +1,20 @@
-import React, {PureComponent} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import './style.css'
 
-class CurrencyButton extends PureComponent {
-  render() {
-    let className = 'filter__currency-button ' + this.props.round;
+const CurrencyButton = props => {
+  let className = 'filter__currency-button ' + props.round;
 
-    this.props.currency === this.props.currentCurrency ? className += ' filter__currency-button_active' : className += '';
+  props.currency === props.currentCurrency ? className += ' filter__currency-button_active' : className += '';
 
-    return (
-      <button aria-label={this.props.ariaLabel} className={className} onClick = {this.handleClick}>
-        { this.props.currency }
-      </button>
-    )
-  }
+  return (
+    <button aria-label={props.ariaLabel} className={className} onClick = {handleClick}>
+      { props.currency }
+    </button>
+  )
 
-  handleClick = () => {
-    this.props.clicked(this.props.currency);
+  function handleClick() {
+    props.clicked(props.currency)
   }
 
 }
