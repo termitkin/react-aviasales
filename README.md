@@ -1,7 +1,7 @@
 # Тренировочная страничка выбора билетов на react
 **Здесь использовалось**
 
-bem, css3, html5, js, react(react-create-app), json
+bem, css3, html5, js, react(create-react-app), json
 
 Страничка нормально выглядит на мобильных
 
