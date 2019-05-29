@@ -14,7 +14,6 @@ const Checkbox = props => {
   function handleOnly() {
     props.only(props.name);
   }
-
   function handleChange() {
     props.changed(props.name);    
   }
