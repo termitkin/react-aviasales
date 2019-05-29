@@ -62,27 +62,27 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 35px;
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
 
 .filter__stop-label::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 19px;
   height: 19px;
-  border: 1px solid #D2D5D6;
+  border: 1px solid #d2d5d6;
   border-radius: 3px;
   box-sizing: border-box;
   margin-right: 10px;
 }
 
 .filter__stop-checkbox:checked + .filter__stop-label::before {
-  border: 1px solid #2196F3;
-  background-image: url('./images/check.svg');
+  border: 1px solid #2196f3;
+  background-image: url("./images/check.svg");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .filter__stop-checkbox:focus + .filter__stop-label::before {
-  border: 3px solid #2196F3;
+  border: 3px solid #2196f3;
 }

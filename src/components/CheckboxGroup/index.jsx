@@ -1,13 +1,13 @@
-import React, {PureComponent} from 'react'
-import Checkbox from '../Checkbox'
-import checkboxes from './checkboxes.json'
-import { checkBoxToStops } from './checkBoxToStops.js'
-import PropTypes from 'prop-types'
-import './style.css'
+import React, { PureComponent } from "react";
+import Checkbox from "../Checkbox";
+import checkboxes from "./checkboxes.json";
+import { checkBoxToStops } from "./checkBoxToStops.js";
+import PropTypes from "prop-types";
+import "./style.css";
 
 class CheckboxGroup extends PureComponent {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       checkBox: true,
@@ -15,7 +15,7 @@ class CheckboxGroup extends PureComponent {
       checkBox1: true,
       checkBox2: true,
       checkBox3: true
-    }
+    };
   }
 
   componentDidMount() {
@@ -26,15 +26,18 @@ class CheckboxGroup extends PureComponent {
   }
 
   render() {
-    const checkbox = checkboxes.checkboxes.map(checkbox => 
-      <Checkbox key={checkbox.key} name={checkbox.name} labelText={checkbox.label} changed={this.changed} checked={this.state[checkbox.name]} only={this.only} />
-    )
+    const checkbox = checkboxes.checkboxes.map(checkbox => (
+      <Checkbox
+        key={checkbox.key}
+        name={checkbox.name}
+        labelText={checkbox.label}
+        changed={this.changed}
+        checked={this.state[checkbox.name]}
+        only={this.only}
+      />
+    ));
 
-    return (
-      <div className="filter__stop-checkboxes-group">
-        {checkbox}
-      </div>
-    )
+    return <div className="filter__stop-checkboxes-group">{checkbox}</div>;
   }
 
   only = elem => {
@@ -42,67 +45,65 @@ class CheckboxGroup extends PureComponent {
     for (let key in obj) {
       this.setState({
         [key]: false
-      })
+      });
     }
     this.setState({
       [elem]: true
-    })
-  }
+    });
+  };
 
   changed = elem => {
     // Если включили чекбокс "все", то включить все остальные чекбоксы
-    if (elem === 'checkBox' && this.state.checkBox === false) {
+    if (elem === "checkBox" && this.state.checkBox === false) {
       let obj = this.state;
       for (let key in obj) {
         this.setState({
           [key]: true
-        })
+        });
       }
     }
 
     // Если выключили чекбокс "все", то выключить все остальные чекбоксы
-    else if (elem === 'checkBox' && this.state.checkBox === true) {
+    else if (elem === "checkBox" && this.state.checkBox === true) {
       let obj = this.state;
       for (let key in obj) {
         this.setState({
           [key]: false
-        })
+        });
       }
     }
 
     // Если включили чекбокс не "все", то выключить чеккбокс "все"
-    else if (elem !== 'checkBox' && this.state.checkBox === true) {
+    else if (elem !== "checkBox" && this.state.checkBox === true) {
       this.setState({
         checkBox: false
-      })
+      });
     }
 
     // Если включили все чекбоксы, кроме "все", то включить "все"
-    else if (elem !== 'checkBox' && this.state.checkBox === false) {
+    else if (elem !== "checkBox" && this.state.checkBox === false) {
       let obj = this.state;
       let check = 0;
       for (let key in obj) {
-        if (key !== 'checkBox' && obj[key] === false) {
+        if (key !== "checkBox" && obj[key] === false) {
           check++;
         }
       }
       if (check === 1 && this.state[elem] === false) {
         this.setState({
           checkBox: true
-        })
+        });
       }
     }
 
     this.setState({
       [elem]: !this.state[elem]
-    })
-
-  }
-
+    });
+  };
 }
 
 CheckboxGroup.propTypes = {
   stops: PropTypes.func.isRequired
-}
+};
 
-export default CheckboxGroup
+export default CheckboxGroup;
