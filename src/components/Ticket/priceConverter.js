@@ -1,45 +1,51 @@
-export function priceConverter(finalPrice, currency) {
-  const usd = 64;
-  const eur = 73;
-
-  if (currency === "usd") {
-    finalPrice = Number(finalPrice) / usd;
-    finalPrice = finalPrice.toFixed(2);
-    finalPrice = String(finalPrice)
-      .split("")
-      .reverse()
-      .join("");
-    finalPrice = String(finalPrice).replace(/(\d{3})/gi, "$& ");
-    finalPrice = String(finalPrice)
-      .split("")
-      .reverse()
-      .join("");
-    finalPrice = finalPrice + " $";
-  } else if (currency === "eur") {
-    finalPrice = Number(finalPrice) / eur;
-    finalPrice = finalPrice.toFixed(2);
-    finalPrice = String(finalPrice)
-      .split("")
-      .reverse()
-      .join("");
-    finalPrice = String(finalPrice).replace(/(\d{3})/gi, "$& ");
-    finalPrice = String(finalPrice)
-      .split("")
-      .reverse()
-      .join("");
-    finalPrice = finalPrice + " €";
+export function priceConverter(price, currency, currentCurrancy) {
+  let usd, eur;
+  if (currentCurrancy === null) {
+    usd = 64;
+    eur = 73;
   } else {
-    finalPrice = String(finalPrice)
-      .split("")
-      .reverse()
-      .join("");
-    finalPrice = String(finalPrice).replace(/(\d{3})/gi, "$& ");
-    finalPrice = String(finalPrice)
-      .split("")
-      .reverse()
-      .join("");
-    finalPrice = finalPrice + " ₽";
+    usd = currentCurrancy.USD_RUB;
+    eur = currentCurrancy.EUR_RUB;
   }
 
-  return finalPrice;
+  if (currency === "usd") {
+    price = Number(price) / usd;
+    price = price.toFixed(2);
+    price = String(price)
+      .split("")
+      .reverse()
+      .join("");
+    price = String(price).replace(/(\d{3})/gi, "$& ");
+    price = String(price)
+      .split("")
+      .reverse()
+      .join("");
+    price = price + " $";
+  } else if (currency === "eur") {
+    price = Number(price) / eur;
+    price = price.toFixed(2);
+    price = String(price)
+      .split("")
+      .reverse()
+      .join("");
+    price = String(price).replace(/(\d{3})/gi, "$& ");
+    price = String(price)
+      .split("")
+      .reverse()
+      .join("");
+    price = price + " €";
+  } else {
+    price = String(price)
+      .split("")
+      .reverse()
+      .join("");
+    price = String(price).replace(/(\d{3})/gi, "$& ");
+    price = String(price)
+      .split("")
+      .reverse()
+      .join("");
+    price = price + " ₽";
+  }
+
+  return price;
 }

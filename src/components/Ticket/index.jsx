@@ -23,10 +23,11 @@ const Ticket = props => {
 
   const departureDate = displayDate(departure_date);
   const arrivalDate = displayDate(arrival_date);
-
-  // console.log(arrivalDate);
-
-  const finalPrice = priceConverter(price, props.currentCurrency);
+  const finalPrice = priceConverter(
+    price,
+    props.currency,
+    props.currentCurrency
+  );
 
   return (
     <div className="wrapForShadowUnderTicket tickets-wrap__ticket">
@@ -46,6 +47,10 @@ const Ticket = props => {
           <div className="stops">
             <div className="stops__text" aria-label="Количество пересадок">
               {stops ? stops : ""} {stopsText(stops)}
+            </div>
+            <div className="path-with-plane">
+              <div className="path-with-plane__path" />
+              <div className="path-with-plane__plane" />
             </div>
           </div>
           <div className="ticket__time" aria-label="Время прилета">
