@@ -21,8 +21,10 @@ class CheckboxGroup extends PureComponent {
   componentDidMount() {
     this.props.stops(checkBoxToStops(this.state));
   }
-  componentDidUpdate() {
-    this.props.stops(checkBoxToStops(this.state));
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state !== prevState) {
+      this.props.stops(checkBoxToStops(this.state));
+    }
   }
 
   render() {
