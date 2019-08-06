@@ -1,35 +1,28 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import CurrencyButtonGroup from "../CurrencyButtonGroup";
 import CheckboxGroup from "../CheckboxGroup";
 import PropTypes from "prop-types";
 import "./style.css";
 
-class Filter extends PureComponent {
-  render() {
-    return (
-      <div className="filter">
-        <fieldset className="filter__controls-wrap">
-          <legend className="filter__titles">Валюта</legend>
+const Filter = props => {
+  const st = sts => props.stops(sts);
+  const cr = cur => props.currentCurrency(cur);
 
-          <CurrencyButtonGroup currentCurrency={this.currentCurrency} />
-        </fieldset>
-        <fieldset className="filter__controls-wrap">
-          <legend className="filter__titles">Количество пересадок</legend>
+  return (
+    <div className="filter">
+      <fieldset className="filter__controls-wrap">
+        <legend className="filter__titles">Валюта</legend>
 
-          <CheckboxGroup stops={this.stops} />
-        </fieldset>
-      </div>
-    );
-  }
+        <CurrencyButtonGroup currentCurrency={cr} />
+      </fieldset>
+      <fieldset className="filter__controls-wrap">
+        <legend className="filter__titles">Количество пересадок</legend>
 
-  stops = stops => {
-    this.props.stops(stops);
-  };
-
-  currentCurrency = cur => {
-    this.props.currentCurrency(cur);
-  };
-}
+        <CheckboxGroup stops={st} />
+      </fieldset>
+    </div>
+  );
+};
 
 Filter.propTypes = {
   currentCurrency: PropTypes.func.isRequired,

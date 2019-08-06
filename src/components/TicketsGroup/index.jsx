@@ -1,68 +1,57 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Ticket from "../Ticket";
 import PropTypes from "prop-types";
 import "./style.css";
 
-const API =
-  "https://free.currconv.com/api/v7/convert?q=USD_RUB,EUR_RUB&compact=ultra&apiKey=55a48a56511997fc7eaf";
+const USD_RUB = "https://api.ratesapi.io/api/latest?base=USD&symbols=RUB";
+const EUR_RUB = "https://api.ratesapi.io/api/latest?base=EUR&symbols=RUB";
 
-class TicketsGroup extends Component {
-  constructor(props) {
-    super(props);
+const TicketsGroup = props => {
+  let [data, newData] = useState(null);
 
-    this.state = {
-      data: null,
-      isLoading: true
-    };
-  }
-
-  componentDidMount() {
-    fetch(API)
+  useEffect(() => {
+    let temp = { usd: "", eur: "" };
+    fetch(USD_RUB)
       .then(response => response.json())
-      .then(data => {
-        this.setState({
-          data: data,
-          isLoading: false
-        });
-      });
-  }
+      .then(data => (temp.usd = data.rates.RUB));
+    fetch(EUR_RUB)
+      .then(response => response.json())
+      .then(data => (temp.eur = data.rates.RUB));
 
-  render() {
-    const currentCurrency = this.props.currentCurrency;
-    const stops = this.props.stops;
-    const ticketsFromProps = this.props.tickets;
+    newData((data = temp));
+  }, []);
 
-    let filteredTickets = [];
-    let ticketsToShow = [];
+  const currentCurrency = props.currentCurrency;
+  const stops = props.stops;
+  const ticketsFromProps = props.tickets;
 
-    stops.forEach(el => {
-      filteredTickets = ticketsFromProps.filter(ticket => {
-        if (ticket.stops === parseInt(el)) {
-          return true;
-        } else {
-          return false;
-        }
-      });
+  const ticketsToShow = [];
+  let filteredTickets = [];
 
-      ticketsToShow.push(...filteredTickets);
+  stops.forEach(el => {
+    filteredTickets = ticketsFromProps.filter(ticket => {
+      if (ticket.stops === Number(el)) {
+        return true;
+      }
+      return false;
     });
 
-    ticketsToShow.sort((a, b) => {
-      return a.price - b.price;
-    });
+    ticketsToShow.push(...filteredTickets);
+  });
 
-    const tickets = ticketsToShow.map(ticket => (
-      <Ticket
-        currency={currentCurrency}
-        key={ticket.price + ticket.arrival_time + ticket.departure_time}
-        tickets={ticket}
-        currentCurrency={this.state.data}
-      />
-    ));
+  ticketsToShow.sort((a, b) => a.price - b.price);
 
-    return <div className="tickets-wrap">{tickets}</div>;
-  }
-}
+  const tickets = ticketsToShow.map(ticket => (
+    <Ticket
+      currency={currentCurrency}
+      key={ticket.price + ticket.arrival_time + ticket.departure_time}
+      tickets={ticket}
+      currentCurrency={data}
+    />
+  ));
+
+  return <div className="tickets-wrap">{tickets}</div>;
+};
 
 TicketsGroup.propTypes = {
   tickets: PropTypes.arrayOf(PropTypes.object).isRequired,
