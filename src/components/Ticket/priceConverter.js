@@ -4,8 +4,8 @@ export function priceConverter(price, currency, currentCurrancy) {
     usd = 64;
     eur = 73;
   } else {
-    usd = currentCurrancy.USD_RUB;
-    eur = currentCurrancy.EUR_RUB;
+    usd = currentCurrancy.usd;
+    eur = currentCurrancy.eur;
   }
 
   if (currency === "usd") {
