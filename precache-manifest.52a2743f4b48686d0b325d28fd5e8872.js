@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/react-aviasales/static/js/runtime~main.555fad69.js"
   },
   {
-    "revision": "6bbed580d48d90f01bfb",
+    "revision": "483b392fdae9f0fa14d5",
     "url": "/react-aviasales/static/js/main.247c49ca.chunk.js"
   },
   {
@@ -24,11 +24,11 @@ self.__precacheManifest = [
     "url": "/react-aviasales/static/js/2.36092fce.chunk.js"
   },
   {
-    "revision": "6bbed580d48d90f01bfb",
-    "url": "/react-aviasales/static/css/main.c9d64e97.chunk.css"
+    "revision": "483b392fdae9f0fa14d5",
+    "url": "/react-aviasales/static/css/main.9a1a571c.chunk.css"
   },
   {
-    "revision": "cbd6ef1d663538421f156dc3ba34e480",
+    "revision": "70cf460f9156dcdd7596e743a1304997",
     "url": "/react-aviasales/index.html"
   }
 ];

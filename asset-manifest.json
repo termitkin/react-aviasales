@@ -1,5 +1,5 @@
 {
-  "main.css": "/react-aviasales/static/css/main.c9d64e97.chunk.css",
+  "main.css": "/react-aviasales/static/css/main.9a1a571c.chunk.css",
   "main.js": "/react-aviasales/static/js/main.247c49ca.chunk.js",
   "main.js.map": "/react-aviasales/static/js/main.247c49ca.chunk.js.map",
   "runtime~main.js": "/react-aviasales/static/js/runtime~main.555fad69.js",
@@ -7,9 +7,9 @@
   "static/js/2.36092fce.chunk.js": "/react-aviasales/static/js/2.36092fce.chunk.js",
   "static/js/2.36092fce.chunk.js.map": "/react-aviasales/static/js/2.36092fce.chunk.js.map",
   "index.html": "/react-aviasales/index.html",
-  "precache-manifest.177e7cef6c950be27ba82b7d9e62088e.js": "/react-aviasales/precache-manifest.177e7cef6c950be27ba82b7d9e62088e.js",
+  "precache-manifest.52a2743f4b48686d0b325d28fd5e8872.js": "/react-aviasales/precache-manifest.52a2743f4b48686d0b325d28fd5e8872.js",
   "service-worker.js": "/react-aviasales/service-worker.js",
-  "static/css/main.c9d64e97.chunk.css.map": "/react-aviasales/static/css/main.c9d64e97.chunk.css.map",
+  "static/css/main.9a1a571c.chunk.css.map": "/react-aviasales/static/css/main.9a1a571c.chunk.css.map",
   "static/media/style.css": "/react-aviasales/static/media/plane.494da491.svg",
   "static/media/logo.svg": "/react-aviasales/static/media/logo.eb515c41.svg"
 }
