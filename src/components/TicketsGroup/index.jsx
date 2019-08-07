@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "promise-polyfill/src/polyfill";
+import axios from "axios";
 import Ticket from "../Ticket";
 import PropTypes from "prop-types";
 import "./style.css";
@@ -11,12 +13,8 @@ const TicketsGroup = props => {
 
   useEffect(() => {
     let temp = { usd: "", eur: "" };
-    fetch(USD_RUB)
-      .then(response => response.json())
-      .then(data => (temp.usd = data.rates.RUB));
-    fetch(EUR_RUB)
-      .then(response => response.json())
-      .then(data => (temp.eur = data.rates.RUB));
+    axios.get(USD_RUB).then(data => (temp.usd = data.data.rates.RUB));
+    axios.get(EUR_RUB).then(data => (temp.eur = data.data.rates.RUB));
 
     newData((data = temp));
   }, []);
