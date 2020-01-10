@@ -11,12 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts(
-  "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js"
-);
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-aviasales/precache-manifest.c5dc36ceb60e1eabe3217f4b8e602a3c.js"
+  "/react-aviasales/precache-manifest.6a9aa6d8bf31e0a53ef7fc5b646a3737.js"
 );
 
 workbox.clientsClaim();
@@ -31,5 +29,6 @@ workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute("/react-aviasales/index.html", {
-  blacklist: [/^\/_/, /\/[^\/]+\.[^\/]+$/]
+  
+  blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
